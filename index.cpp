@@ -1,26 +1,26 @@
 #include <cmath>
 #include <bits/stdc++.h>
 
-namespace mtl {
+namespace mlb {
     // Function to add two or more numbers
-    double add(int a[], int len){
-        double sum = 0;
+    int add(int a[], int len){
+        int sum = 0;
         for(int i = 0; i < len; i++){
             sum += a[i];
         }
         return sum;
     }
     // Function to subtract between two or more numbers
-    double sub(int a[], int len){
-        double sum = 0;
+    int sub(int a[], int len){
+        int sum = 0;
         for(int i = 0; i < len; i++){
             sum -= a[i];
         }
         return sum;
     }
     // Function to multiply two or more numbers
-    double mul(int a[], int len){
-        double sum = 1;
+    int mul(int a[], int len){
+        int sum = 1;
         for(int i = 0; i < len; i++){
             sum *= a[i];
         }
@@ -60,11 +60,11 @@ namespace mtl {
         return rand()%(max-min + 1) + min;
     }
     // Function to find limit of a function
-    double limit(int tt, double (*fc)(double))
+    double limit(int tt, int (*fc)(int))
     {
         int n;
-        double a = pow(10,-7);
-        double lim = (fc(tt - a) + fc(tt + a)) / 2;
+        int a = pow(10,-7);
+        int lim = (fc(tt - a) + fc(tt + a)) / 2;
         return lim;
     }
     // Function to find factorial of a number
@@ -118,13 +118,13 @@ namespace mtl {
         return true;
     }
     // get summation of a series
-    double sums(int start, int end, double (*fc)(double)){
+    int sums(int start, int end, int (*fc)(int)){
         if(start > end){
             int temp = start;
             start = end;
             end = temp;
         }
-        double sum = 0;
+        int sum = 0;
         for(int i = start; i <= end; i++){
             sum += fc(i);
         }
@@ -156,22 +156,5 @@ namespace mtl {
     // get lcm of two numbers
     int lcm(int a, int b){
         return (a*b)/gcd(a, b);
-    }
-    // get all prime numbers between two numbers
-    int* primes(int start, int end){
-        if(start > end){
-            int temp = start;
-            start = end;
-            end = temp;
-        }
-        static int result[100];
-        int j = 0;
-        for(int i = start; i <= end; i++){
-            if(isPrime(i)){
-                j++;
-                result[j] = i;
-            }
-        }
-        return result;
     }
 }

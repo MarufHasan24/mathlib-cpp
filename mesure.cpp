@@ -1,13 +1,12 @@
 #include <cmath>
 #include <bits/stdc++.h>
-#define PI 3.141592653589793
-namespace mtl {
+namespace mlb {
     // Function to measure length of a line from it's edge points 
     float lineWidth(int x[], int y[]){
         return sqrt(pow(x[1]-x[0], 2) + pow(y[1]-y[0], 2));
     }
     // Function to measure Perimeter from edge points
-    float Perimeter(int towD[][2], int len){
+    float perimeter(int towD[][2], int len){
         float sum = 0;
         for(int i = 0; i < len-1; i++){
             sum += lineWidth(towD[i], towD[i+1]);
@@ -16,7 +15,7 @@ namespace mtl {
         return sum;  
     }
     // Function to measure area of a rectangle from it's edge points
-    float Area(int towD[][2], int len){
+    float area(int towD[][2], int len){
         float sum = 0;
         for(int i = 0; i < len-1; i++){
             sum += towD[i][0]*towD[i+1][1] - towD[i+1][0]*towD[i][1];
@@ -25,7 +24,7 @@ namespace mtl {
         return abs(sum/2);
     }
     // Function to measure volume of a cuboid from it's edge points
-    float Volume(int threeD[][3], int len){
+    float volume(int threeD[][3], int len){
         float sum = 0;
         for(int i = 0; i < len-1; i++){
             sum += threeD[i][0]*threeD[i+1][1]*threeD[i+2][2] - threeD[i+2][0]*threeD[i+1][1]*threeD[i][2];
@@ -34,7 +33,7 @@ namespace mtl {
         return abs(sum/6);
     }
     // Function to measure surface area of a cuboid from it's edge points
-    float SurfaceArea(int threeD[][3], int len){
+    float surfaceArea(int threeD[][3], int len){
         float sum = 0;
         for(int i = 0; i < len-1; i++){
             sum += lineWidth(threeD[i], threeD[i+1])*lineWidth(threeD[i+1], threeD[i+2]);

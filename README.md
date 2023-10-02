@@ -8,7 +8,7 @@ This is a C++ library that I wrote. It provides a number of useful utilities, in
 - Determining if a number is odd, prime, and more.
 - Solving quadratic equations (ax^2 + bx + c = 0) and linear equations (ax + by = c).
 - Measuring volume, area, length, angles, and more for various shapes using only their vertex points.
-- Providing access to 23 essential mathematical constants.
+- Providing access to 20+ essential mathematical constants.
 
 ## Installation
 
@@ -28,7 +28,7 @@ Then, you can use the library functions like any other function in your code. Fo
 
 ```c++
 int arr[] = {1, 2, 3, 4, 5};
-int sum = mtl::add(arr, 5);
+int sum = mlb::add(arr, 5);
 
 ```
 
@@ -47,7 +47,7 @@ Here is a simple example of how to use the library:
 int main() {
   // Calculate the sum of some numbers
   int arr[] = {1, 2, 3, 4, 5};
-  int sum = mtl::add(arr, 5);
+  int sum = mlb::add(arr, 5);
 
   // Print the sum to the console.
   std::cout << "The sum is: " << sum << std::endl;
@@ -60,17 +60,17 @@ int main() {
 
 Here's a taste of the functions provided by **MathLib-cpp**:
 
-1. `double add(int a[], int len);`
+1. `int add(int a[], int len);`
 
    - Description: Computes the sum of elements in an integer array.
    - Usage Example: `add(arr, length)` returns the sum of all elements in the array `arr` of length `length`.
 
-2. `double sub(int a[], int len);`
+2. `int sub(int a[], int len);`
 
    - Description: Calculates the result of subtracting all elements in an integer array from the first element.
    - Usage Example: `sub(arr, length)` returns the result of subtracting all elements in the array `arr` from the first element.
 
-3. `double mul(int a[], int len);`
+3. `int mul(int a[], int len);`
 
    - Description: Multiplies all elements in an integer array together.
    - Usage Example: `mul(arr, length)` returns the product of all elements in the array `arr`.
@@ -100,7 +100,7 @@ Here's a taste of the functions provided by **MathLib-cpp**:
    - Description: Generates a random integer between `min` and `max`.
    - Usage Example: `random(min, max)` returns a random integer within the specified range.
 
-9. `double limit(int tt, double (*fc)(double));`
+9. `double limit(int tt, int (*fc)(int));`
 
    - Description: Evaluates the limit of a given mathematical function `fc` as the variable approaches `tt`.
    - Usage Example: `limit(tt, function)` calculates the limit of the provided function as it approaches `tt`.
@@ -132,7 +132,7 @@ Here's a taste of the functions provided by **MathLib-cpp**:
     - Description: Determines if an integer `n` is an odd number.
     - Usage Example: `isOdd(n)` returns `true` if `n` is odd; otherwise, it returns `false`.
 
-15. `double sums(int start, int end, double (*fc)(double));`
+15. `int sums(int start, int end, int (*fc)(int));`
 
     - Description: Calculates the sum of function values from `start` to `end` using the provided function `fc`.
     - Usage Example: `sums(start, end, function)` returns the sum of function values within the specified range.
