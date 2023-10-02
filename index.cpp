@@ -1,7 +1,7 @@
 #include <cmath>
 #include <bits/stdc++.h>
 
-namespace mathlib {
+namespace mtl {
     // Function to add two or more numbers
     double add(int a[], int len){
         double sum = 0;

@@ -1,7 +1,7 @@
 #include <cmath>
 #include <bits/stdc++.h>
 #define PI 3.141592653589793
-namespace mathlib {
+namespace mtl {
     // Function to measure length of a line from it's edge points 
     float lineWidth(int x[], int y[]){
         return sqrt(pow(x[1]-x[0], 2) + pow(y[1]-y[0], 2));

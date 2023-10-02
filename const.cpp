@@ -1,4 +1,4 @@
-namespace mathlib {
+namespace mtl {
     long double h= 6.62607004e-34,
     G= 6.67428e-11,
     g= 9.80665,
