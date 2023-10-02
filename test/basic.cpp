@@ -20,7 +20,7 @@ int main(){
     cout << mlb::isPrime(5) << endl;
     cout << mlb::isOdd(5) << endl;
     cout << mlb::sums(2, 5, func) << endl;
-    vector<int> g1 = mlb::primeFactors(30);
+    vector<int> g1 = mlb::primeFactors(210);
     cout << "Prime Factors of 30 are: ";
     for (auto i = g1.begin(); i != g1.end(); ++i)
         cout << *i << " ";
