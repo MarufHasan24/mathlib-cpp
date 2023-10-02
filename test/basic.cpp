@@ -8,7 +8,7 @@ int func(int x){
 }
 int main(){
     int a[] = {1, 2, 3, 4, 5};
-    /* cout << mlb::add(a, 5) << endl;
+    cout << mlb::add(a, 5) << endl;
     cout << mlb::sub(a, 5) << endl;
     cout << mlb::mul(a, 5) << endl;
     cout << mlb::div(a, 5) << endl;
@@ -19,7 +19,10 @@ int main(){
     cout << mlb::fact(5) << endl;
     cout << mlb::isPrime(5) << endl;
     cout << mlb::isOdd(5) << endl;
-    cout << mlb::sums(2, 5, func) << endl; */
-    cout << primeFactors(100) << endl;
+    cout << mlb::sums(2, 5, func) << endl;
+    vector<int> g1 = mlb::primeFactors(30);
+    cout << "Prime Factors of 30 are: ";
+    for (auto i = g1.begin(); i != g1.end(); ++i)
+        cout << *i << " ";
     return 0;
 }

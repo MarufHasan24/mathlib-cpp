@@ -1,5 +1,6 @@
 #include <cmath>
 #include <bits/stdc++.h>
+#include <vector>
 
 namespace mlb {
     // Function to add two or more numbers
@@ -215,10 +216,10 @@ namespace mlb {
         return result;
     }
 // Get all the prime factors of n
-    vector<int> primeFactors(long long n)
+    std::vector<int> primeFactors(int n)
     {
-        vector<int> result;
-        long long temp = n;
+        std::vector<int> result;
+        int temp = n;
         int l = 2;
         while (temp > 1)
         {
