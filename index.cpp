@@ -216,10 +216,10 @@ namespace mlb {
         return result;
     }
 // Get all the prime factors of n
-    std::vector<int> primeFactors(int n)
+    std::vector<int> primeFactors(long long n)
     {
         std::vector<int> result;
-        int temp = n;
+        long long temp = n;
         int l = 2;
         while (temp > 1)
         {
