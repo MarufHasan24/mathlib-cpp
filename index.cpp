@@ -214,7 +214,7 @@ namespace mlb {
         }
         return result;
     }
-#Get all the prime factors of n
+// Get all the prime factors of n
     vector<int> primeFactors(long long n)
     {
         vector<int> result;
