@@ -5,7 +5,7 @@
 
 using namespace std;
 
-namespace mlh
+namespace mlb
 {
     // Function to convert decimal to hexadecimal
     string decimalToHex(int decimalNumber)
