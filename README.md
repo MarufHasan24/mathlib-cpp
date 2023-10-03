@@ -35,8 +35,10 @@ int sum = mlb::add(arr, 5);
 ## Documentation
 
 For extensive documentation, visit the [MathLib-cpp Documentation](https://marufhasan24.github.io/mathlib_wiki/cpp/wiki.html).
-Bainary documentation: <https://github.com/MarufHasan24/mathlib-cpp/wiki/Bainary-Mathlib%E2%80%90cpp>
-Hexadecimal documentation: <https://github.com/MarufHasan24/mathlib-cpp/wiki/Hexadecimal-Mathlib%E2%80%90cpp>
+
+Bainary documentation: <https://github.com/MarufHasan24/mathlib-cpp/wiki/Bainary-Mathlib‐cpp>
+
+Hexadecimal documentation: <https://github.com/MarufHasan24/mathlib-cpp/wiki/Hexadecimal-Mathlib‐cpp>
 
 ## Example
 
