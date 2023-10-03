@@ -14,8 +14,8 @@ namespace mlb {
     }
     // Function to convert binary to decimal
     int binaryToDecimal(const string& binary) {
-    int decimalNumber = stoi(binary, nullptr, 2);
-    return decimalNumber;
+        int decimalNumber = stoi(binary, nullptr, 2);
+        return decimalNumber;
     }
     // Function to add two binary numbers from string type input (binary1 + binary2)
     string binaryAdd(const string& binary1,const string& binary2) {
