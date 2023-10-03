@@ -2,7 +2,6 @@
 
 This C++ file provides various functions for performing hexadecimal calculations. This file uses the following standard C++ header files:
 
-- `iostream`
 - `sstream`
 - `string`
 - `stdexcept`

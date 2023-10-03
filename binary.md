@@ -6,6 +6,7 @@ This C++ file provides various functions for performing binary calculations. Thi
 - `string`
 - `bitset`
 - `sstream`
+- `stdexcept`
 
 all are standard C++ header files. This export all functions in `mlb` namespace.
 
