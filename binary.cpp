@@ -4,7 +4,7 @@
 #include<bitset>
 #include<stdexcept>
 
-#define  BITSET_VAL  16    // Assuming 8 bits fot bitset value
+#define  BITSET_VAL  16    // Assuming 8 bits for bitset value
 
 using namespace std;
 namespace mlb {
