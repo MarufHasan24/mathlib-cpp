@@ -70,28 +70,28 @@ namespace mlb {
      string binaryAdd(int num1, int num2) {
          string s1 = decimalToBinary(num1);
          string s2 = decimalToBinary(num2);
-         string s3 = binaryAddition(s1, s2);
+         string s3 = binaryAdd(s1, s2);
         return s3;
     }
     // Function to subtract two binary numbers from int type input (binary1 - binary2)
     string binarySub(int num1, int num2) {
          string s1 = decimalToBinary(num1);
          string s2 = decimalToBinary(num2);
-         string s3 = binarySubtraction(s1, s2);
+         string s3 = binarySub(s1, s2);
         return s3;
     }
     // Function to multiply two binary numbers from int type input (binary1 * binary2)
     string binaryMul(int num1, int num2) {
          string s1 = decimalToBinary(num1);
          string s2 = decimalToBinary(num2);
-         string s3 = binaryMultiplication(s1, s2);
+         string s3 = binaryMul(s1, s2);
         return s3;
     }
     // Function to divide two binary numbers from int type input (binary1 / binary2)
     string binaryDiv(int num1, int num2) {
         string s1 = decimalToBinary(num1);
         string s2 = decimalToBinary(num2);
-        string s3 = binaryDivision(s1, s2);
+        string s3 = binaryDiv(s1, s2);
         return s3;
     }
 };
