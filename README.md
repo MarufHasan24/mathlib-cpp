@@ -40,6 +40,8 @@ Bainary documentation: <https://github.com/MarufHasan24/mathlib-cpp/wiki/Bainary
 
 Hexadecimal documentation: <https://github.com/MarufHasan24/mathlib-cpp/wiki/Hexadecimal-Mathlib‐cpp>
 
+Octal documentation: <https://github.com/MarufHasan24/mathlib-cpp/wiki/Octal-Mathlib‐cpp>
+
 ## Example
 
 Here is a simple example of how to use the library:
