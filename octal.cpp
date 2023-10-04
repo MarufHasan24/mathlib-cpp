@@ -7,7 +7,7 @@ using namespace std;
 
 #define BITSET_VAL 16 // Assuming 8 bits for bitset value
 
-namespace mlo {
+namespace mlb {
     // Function to convert decimal to octal
     string decimalToOctal(int &decimalNumber) {
         std::stringstream ss;
