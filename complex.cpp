@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <cmath>
 
@@ -52,16 +51,6 @@ namespace mlb {
             double denominator = other.real * other.real + other.imaginary * other.imaginary;
             return Complex((real * other.real + imaginary * other.imaginary) / denominator,
                 (imaginary * other.real - real * other.imaginary) / denominator);
-        }
-
-        // Function to display the complex number
-        void display() const {
-            if (imaginary >= 0) {
-                std::cout << real << " + " << imaginary << "i";
-            }
-            else {
-                std::cout << real << " - " << -imaginary << "i";
-            }
         }
     };
 }
