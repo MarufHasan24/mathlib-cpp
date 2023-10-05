@@ -25,5 +25,5 @@ jobs:
     steps:
      - uses: Dup4/actions-setup-gcc@v1
      - run: |
-          chmod +x ./scripts/built.sh
-          ./scripts/built.sh ./../test
+          pwd || chmod +x ./scripts/built.sh
+          ./scripts/built.sh
