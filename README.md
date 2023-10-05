@@ -42,6 +42,8 @@ Hexadecimal documentation: <https://github.com/MarufHasan24/mathlib-cpp/wiki/Hex
 
 Octal documentation: <https://github.com/MarufHasan24/mathlib-cpp/wiki/Octal-Mathlib‐cpp>
 
+Complex Number : <https://github.com/MarufHasan24/mathlib-cpp/wiki/Complex-Number>
+
 ## Example
 
 Here is a simple example of how to use the library:
