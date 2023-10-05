@@ -5,6 +5,8 @@ on:
     branches:
       - master
   pull_request:
+    branches:
+      - master
 
 jobs:
   codespell:
@@ -16,4 +18,12 @@ jobs:
         with:
           # file types to ignore
           skip: "*.json,*.yml,DIRECTORY.md"
-          ignore_words_list: "ba,esy,yse,falsy"
+          ignore_words_list: "ba,esy,yse,falsy,sortify"
+  gcc:
+    name: Setup GCC
+    runs-on: ubuntu-latest
+    steps:
+     - uses: Dup4/actions-setup-gcc@v1
+     - run: |
+          chmod +x https://raw.githubusercontent.com/MarufHasan24/mathlib-cpp/master/scripts/built.sh
+          https://raw.githubusercontent.com/MarufHasan24/mathlib-cpp/master/scripts/built.sh

@@ -41,6 +41,7 @@ namespace mlb {
         sum += lineWidth(threeD[len-1], threeD[0])*lineWidth(threeD[0], threeD[1]);
         return abs(sum*2);
     }
+    // Function to measure angle of a triangle from it's edge points
     float* tringleAngle(int x[], int y[], int z[]){
         float a = lineWidth(x, y);
         float b = lineWidth(y, z);
@@ -49,6 +50,30 @@ namespace mlb {
         result[0] = acos((pow(b, 2) + pow(c, 2) - pow(a, 2))/(2*b*c));
         result[1] = acos((pow(a, 2) + pow(c, 2) - pow(b, 2))/(2*a*c));
         result[2] = acos((pow(a, 2) + pow(b, 2) - pow(c, 2))/(2*a*b));
+        return result;
+    }
+    // Function to measure median of a triangle from it's edge points
+    float* tringleMedian(int x[], int y[], int z[]){
+        static float result[3];
+        result[0] = sqrt(2*pow(lineWidth(x, y), 2) + 2*pow(lineWidth(x, z), 2) - pow(lineWidth(y, z), 2))/2;
+        result[1] = sqrt(2*pow(lineWidth(y, z), 2) + 2*pow(lineWidth(y, x), 2) - pow(lineWidth(z, x), 2))/2;
+        result[2] = sqrt(2*pow(lineWidth(z, x), 2) + 2*pow(lineWidth(z, y), 2) - pow(lineWidth(x, y), 2))/2;
+        return result;
+    }
+    // Function to measure mode of a triangle from it's edge points
+    float* tringleMode(int x[], int y[], int z[]){
+        static float result[3];
+        result[0] = (lineWidth(x, y) + lineWidth(x, z) - lineWidth(y, z))/2;
+        result[1] = (lineWidth(y, z) + lineWidth(y, x) - lineWidth(z, x))/2;
+        result[2] = (lineWidth(z, x) + lineWidth(z, y) - lineWidth(x, y))/2;
+        return result;
+    }
+    // Function to measure mean of a triangle from it's edge points
+    float* tringleMean(int x[], int y[], int z[]){
+        static float result[3];
+        result[0] = (lineWidth(x, y) + lineWidth(x, z) + lineWidth(y, z))/3;
+        result[1] = (lineWidth(y, z) + lineWidth(y, x) + lineWidth(z, x))/3;
+        result[2] = (lineWidth(z, x) + lineWidth(z, y) + lineWidth(x, y))/3;
         return result;
     }
 }
