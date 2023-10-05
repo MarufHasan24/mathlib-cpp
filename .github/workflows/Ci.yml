@@ -25,6 +25,6 @@ jobs:
     steps:
      - uses: Dup4/actions-setup-gcc@v1
      - run: |
-     wget https://raw.githubusercontent.com/TheAlgorithms/scripts/main/built.sh
+     wget https://raw.githubusercontent.com/MarufHasan24/mathlib-cpp/master/scripts/built.sh
           chmod +x ./built.sh
           ./built.sh
