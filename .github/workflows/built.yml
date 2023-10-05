@@ -16,5 +16,5 @@ jobs:
     - name: Run My Script  # Replace with a meaningful name
       run: |
         wget https://raw.githubusercontent.com/MarufHasan24/mathlib-cpp/master/scripts/out.sh
-        chmod +x out.sh
+        chmod u+x ./out.sh
         ./out.sh
