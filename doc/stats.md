@@ -1,6 +1,6 @@
 # Statistical Operations
 
-This C++ file provides various functions for staticstics like calulating Mean, Median, Mode, NormalPDF, BinomialPMF and ExponentialPDF. This file use following header files:
+This C++ file provides various functions for staticstics like calculating Mean, Median, Mode, NormalPDF, BinomialPMF and ExponentialPDF. This file use following header files:
 
 - 'cmath'
 - 'vector'
