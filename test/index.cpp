@@ -1,7 +1,5 @@
 #include <iostream>
-#include "../index.cpp" // to get basic functions like fact, isPrime, isOdd, sums, combo, permt, gcd, lcm
-#include "../measure.cpp"// to get measure functions like lineWidth, Perimeter, Area, Volume, SurfaceArea, tringleAngle
-#include "../const.cpp" // to get constants
+#include "../index.cpp" // to get basic functions like fact, isPrime, isOdd, sums, combo, permt, gcd, lcm, primeFactors, etc. 
 using namespace std;
 int func(int x){
     return x*x;
