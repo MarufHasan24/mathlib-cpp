@@ -40,15 +40,15 @@ This function returns the mode(number with maximum frequency) in given array
 ```
 
 ### 'float normalPDF(float x, float mean, float stddev)'
-This function give Normal Probability function for given x, mean and standard deviation
+This function give Normal Probability Density function for given x, mean and standard deviation
 
 **Parameters**
-  'x' : The value for which you want to calculate the probability density
-  'mean' : The mean (average) of the normal distribution
-  'stddev' : The standard deviation of the normal distribution
+ - 'x' : The value for which you want to calculate the probability density
+ - 'mean' : The mean (average) of the normal distribution
+ - 'stddev' : The standard deviation of the normal distribution
 
 **Formula**
- (1 / (stddev * sqrt(2 * π))) * exp(-((x - mean)² / (2 * stddev²)))
+ : (1 / (stddev * sqrt(2 * π))) * exp(-((x - mean)² / (2 * stddev²)))
 
 **Example**
 ```cpp
@@ -57,14 +57,14 @@ This function give Normal Probability function for given x, mean and standard de
 ```
 
 ### 'float exponentialPDF(float x, float lambda)'
-This function returns exponential Probability function for given x and lambda
+This function returns Exponential Probability Density function for given x and lambda
 
 **Parameters**
-  'x' : The value for which you want to calculate the probability density
-  'lambda': The rate parameter of the exponential distribution
+ - 'x' : The value for which you want to calculate the probability density
+ - 'lambda': The rate parameter of the exponential distribution
 
 **Formula**
- lambda * exp(-lambda * x)
+ : lambda * exp(-lambda * x)
 
 **Example**
 ```cpp
@@ -74,20 +74,20 @@ This function returns exponential Probability function for given x and lambda
 ```
 
 ### 'float binomialPMF(int k, int n, float p)'
-This function returns Probability mass function for given inputs
+This function returns Binomial Probability Mass function for given inputs
 
 **Parameters**
-  'k' : The number of successful events you want to find the probability for
-  'n' : The total number of trials
-  'p' : The probability of success on a single trial
+ - 'k' : The number of successful events you want to find the probability for
+ - 'n' : The total number of trials
+ - 'p' : The probability of success on a single trial
 
 **Formula**
- (n C k) * p^k * (1 - p)^(n - k)
+ : (n C k) * p^k * (1 - p)^(n - k)
 
 **Example**
 ```cpp
    int k = 2;
-    int n = 5;
-    float p = 0.3;
-    float binomial_pmf = mlb::binomialPMF(k, n, p);
+   int n = 5;
+   float p = 0.3;
+   float binomial_pmf = mlb::binomialPMF(k, n, p);
 ```
