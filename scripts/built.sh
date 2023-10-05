@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin
 
 path=$(dirname $0)/..
 echo "Building all files in ${path}/test"
