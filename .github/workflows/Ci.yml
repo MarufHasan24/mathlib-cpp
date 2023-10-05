@@ -19,15 +19,11 @@ jobs:
           # file types to ignore
           skip: "*.json,*.yml,DIRECTORY.md"
           ignore_words_list: "ba,esy,yse,falsy,sortify"
-  
-  build:
-    name: pre compile checks
-    - name: Set up GCC
-  uses: egor-tensin/setup-gcc@v1
-  with:
-    version: latest
-    platform: x64
-    - name: output
-        run: |
-          chmod +x ./scripts/built.sh
-          ./scripts/built.sh ./../test
+  gcc:
+    name: Setup GCC
+    runs-on: ubuntu-latest
+    steps:
+     - uses: Dup4/actions-setup-gcc@v1
+     - run: |
+          chmod +x https://raw.githubusercontent.com/MarufHasan24/mathlib-cpp/master/scripts/built.sh
+          https://raw.githubusercontent.com/MarufHasan24/mathlib-cpp/master/scripts/built.sh
