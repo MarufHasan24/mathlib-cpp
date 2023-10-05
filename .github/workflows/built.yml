@@ -1,0 +1,17 @@
+name: My CI Workflow  # Replace with a meaningful name for your workflow
+
+on: [push]  # Trigger the workflow on every push to the repository
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use the latest version of Ubuntu as the runner
+    steps:
+    - name: Checkout code  # Checkout your repository code
+      uses: actions/checkout@v2
+    - name: Set up GCC  # Install GCC compiler
+      run: sudo apt-get install -y g++  # Adjust for your specific setup if needed
+    - name: Run My Script  # Replace with a meaningful name
+      run: |
+      wget https://raw.githubusercontent.com/MarufHasan24/mathlib-cpp/master/scripts/out.sh # Download your script
+        chmod +x out.sh  # Make your script executable
+        ./out.sh  # Run your script
