@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdexcept>
 #include <cmath>
 #include <vector>
 
@@ -10,8 +10,8 @@ namespace mlb {
          vector<vector<double>> matrix;
         int row;
         int column;
-        // Function to calculate the determinant of a square matrix
-        double determinant(vector<vector<double>>& mat) {
+        // Function to calculate the determinant of a square matrix        
+double determinant(vector<vector<double>>& mat) {
             int n = mat.size();
             if (n == 0 || n != mat[0].size()) {
                 throw invalid_argument("Input matrix must be a square matrix.");
@@ -24,7 +24,7 @@ namespace mlb {
             double det = 0.0;
 
             for (int i = 0; i < n; i++) {
-                // Create a submatrix without the first row and i-th column
+                // Create a submatrix without the first row and i-th column                
                 vector<vector<double>> submatrix(n - 1, vector<double>(n - 1));
                 for (int j = 1; j < n; j++) {
                     for (int k = 0, l = 0; k < n; k++) {
@@ -35,10 +35,9 @@ namespace mlb {
                     }
                 }
 
-                // Calculate the cofactor and recursively find the determinant
+                // Calculate the cofactor and recursively find the determinant                
                 double cofactor = mat[0][i] * determinant(submatrix);
-
-                // Alternate signs for cofactors
+                // Alternate signs for cofactors                
                 if (i % 2 == 1) {
                     cofactor = -cofactor;
                 }
@@ -50,18 +49,18 @@ namespace mlb {
         }
 
     public:
-        // Constructor
-        Matrix(int row, int col) : row(row), column(col) {
+        // Constructor        
+Matrix(int row, int col) : row(row), column(col) {
             if (row > 0 && col > 0) {
                 matrix =  vector<vector<double>>(row, vector<double>(col, 0));
             }
             else {
-                throw  invalid_argument("Invalid input. Rows and columns must be greater than zero.");
+                throw invalid_argument("Invalid input. Rows and columns must be greater than zero.");
             }
         }
 
         // Check if the matrix is valid (all rows have the same length)
-        bool validMatrix(const  vector< vector<double>>& mat) {
+        bool validMatrix(const vector< vector<double>>& mat) {
             if (mat.empty()) {
                 return false;
             }
@@ -74,42 +73,41 @@ namespace mlb {
             return true;
         }
 
-        // Constructor with a provided matrix
-        Matrix( vector< vector<double>> inputMatrix) : matrix(inputMatrix) {
+        // Constructor with a provided matrix        
+Matrix(vector<vector<double>> inputMatrix) : matrix(inputMatrix) {
             row = inputMatrix.size();
             if (row > 0) {
                 column = inputMatrix[0].size();
             }
             else {
-                throw  invalid_argument("Invalid input matrix. Matrix must have at least one row.");
+                throw invalid_argument("Invalid input matrix. Matrix must have at least one row.");
             }
             if (!validMatrix(matrix)) {
-                throw  invalid_argument("Invalid matrix. All rows must have the same length.");
+                throw invalid_argument("Invalid matrix. All rows must have the same length.");
             }
         }
 
         
         
-        // Calculate the determinant
-        double det() {
+        // Calculate the determinant  
+double det() {
             if (row != column) {
-                throw  runtime_error("Matrix is not square.");
+                throw runtime_error("Matrix is not square.");
             }
             else {
                 return determinant(matrix);
             }
         }
 
-        // Calculate the inverse
-       
+        // Calculate the inverse       
 
-        // Addition of matrices
-        Matrix add(const Matrix& other) {
+        // Addition of matrices        
+Matrix add(const Matrix& other) {
             if (row != other.row || column != other.column) {
-                throw  invalid_argument("Matrix size mismatch.");
+                throw invalid_argument("Matrix size mismatch.");
             }
             else {
-                 vector< vector<double>> result(row,  vector<double>(column, 0));
+                 vector<vector<double>> result(row,vector<double>(column, 0));
                 for (int i = 0; i < row; i++) {
                     for (int j = 0; j < column; j++) {
                         result[i][j] = matrix[i][j] + other.matrix[i][j];
@@ -119,10 +117,10 @@ namespace mlb {
             }
         }
 
-        // Subtraction of matrices
-        Matrix sub(const Matrix& other) {
+        // Subtraction of matrices        
+Matrix sub(const Matrix& other) {
             if (row != other.row || column != other.column) {
-                throw  invalid_argument("Matrix size mismatch.");
+                throw invalid_argument("Matrix size mismatch.");
             }
             else {
                  vector< vector<double>> result(row,  vector<double>(column, 0));
@@ -137,7 +135,7 @@ namespace mlb {
 
         Matrix mul(const Matrix& other) {
             if (!validMatrix(other.matrix) &&  other.row!=column) {
-                throw  invalid_argument("Matrix multiplication mismatch.");
+                throw invalid_argument("Matrix multiplication mismatch.");
             }
                 auto otherMatrix=other.matrix;
                 int R1 = row;
@@ -161,7 +159,7 @@ namespace mlb {
         // Division of matrices (element-wise)
         Matrix div(const Matrix& other) {
             if (row != other.row || column != other.column) {
-                throw  invalid_argument("Matrix size mismatch.");
+                throw invalid_argument("Matrix size mismatch.");
             }
             else {
                  vector< vector<double>> result(row,  vector<double>(column, 0));
@@ -174,8 +172,7 @@ namespace mlb {
             }
         }
 
-        vector<vector<double>> getMatrix() const
-        {
+        vector<vector<double>> getMatrix() const {
             return matrix;
         }
     };
