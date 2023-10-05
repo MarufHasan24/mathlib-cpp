@@ -25,5 +25,5 @@ jobs:
     steps:
      - uses: Dup4/actions-setup-gcc@v1
      - run: |
-          pwd || chmod +x ./scripts/built.sh
-          ./scripts/built.sh
+          chmod +x https://raw.githubusercontent.com/MarufHasan24/mathlib-cpp/master/scripts/built.sh
+          https://raw.githubusercontent.com/MarufHasan24/mathlib-cpp/master/scripts/built.sh
