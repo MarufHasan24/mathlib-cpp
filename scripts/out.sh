@@ -1,6 +1,7 @@
 path=$(pwd)/../test
 cd $path
 echo "Running tests in $path"
+echo $(ls)
 row_count=0
 pass_count=0
 fail_count=0
@@ -13,7 +14,7 @@ for entry in $(ls); do
      if [ -f $path/test.txt ]; then
       echo "-----------------------------------"
       row_count=$((row_count+1))
-      echo "Quering $entry"
+      echo "Querying $entry"
      value=$(<"$path/test.txt")
       out=()
       IFS=',' read -ra out <<< "$value"

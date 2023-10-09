@@ -5,7 +5,7 @@ using namespace mlb;
 
 int main()
 {
-    tester::describe("Convertions", []()
+    tester::describe("Conversions", []()
                      {
         tester::toEq("1 inch = 2.54 centimeters", 2.54, inch2cm(1));
         tester::toEq("1 centimeter = 0.393701 inches", 0.393701, cm2inch(1));
