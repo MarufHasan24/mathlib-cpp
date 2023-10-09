@@ -1,38 +1,21 @@
-#include <iostream>
 #include "../hexadecimal.cpp"
+#include "../scripts/tester.cpp"
 
 using namespace std;
 
-int main() {
-    // Test decimal to hexadecimal conversion
-    cout << "Decimal 255 to Hex: " << mlb::decimalToHex(255) << endl;
-
-    // Test hexadecimal to decimal conversion
-    cout << "Hexadecimal 'FF' to Decimal: " << mlb::hexToDecimal("FF") << endl;
-
-    // Test addition of two hexadecimal numbers (string input)
-    cout << "Hexadecimal addition of 'A1' and 'BE': " << mlb::hexAdd("A1", "BE") << endl;
-
-    // Test subtraction of two hexadecimal numbers (string input)
-    cout << "Hexadecimal subtraction of 'BE' and 'A1': " << mlb::hexSub("BE", "A1") << endl;
-
-    // Test multiplication of two hexadecimal numbers (string input)
-    cout << "Hexadecimal multiplication of 'A' and 'B': " << mlb::hexMul("A", "B") << endl;
-
-    // Test division of two hexadecimal numbers (string input)
-    cout << "Hexadecimal division of '64' and '8': " << mlb::hexDiv("64", "8") << endl;
-
-    // Test addition of two decimal numbers (integer input) and returning result as hex
-    cout << "Decimal addition of 10 and 20 (result in Hex): " << mlb::hexAdd(10, 20) << endl;
-
-    // Test subtraction of two decimal numbers (integer input) and returning result as hex
-    cout << "Decimal subtraction of 30 and 10 (result in Hex): " << mlb::hexSub(30, 10) << endl;
-
-    // Test multiplication of two decimal numbers (integer input) and returning result as hex
-    cout << "Decimal multiplication of 5 and 5 (result in Hex): " << mlb::hexMul(5, 5) << endl;
-
-    // Test division of two decimal numbers (integer input) and returning result as hex
-    cout << "Decimal division of 100 and 10 (result in Hex): " << mlb::hexDiv(100, 10) << endl;
-
+int main()
+{
+    tester::describe("Hexadecimal", []()
+                     {
+tester::toEq("Decimal to Hexadecimal", "FF", mlb::decimalToHex(255));
+tester::toEq("Hexadecimal to Decimal", 255, mlb::hexToDecimal("FF"));
+tester::toEq("Hexadecimal Addition", "15F", mlb::hexAdd("A1", "BE"));
+tester::toEq("Hexadecimal Subtraction", "1D", mlb::hexSub("BE", "A1"));
+tester::toEq("Hexadecimal Multiplication", "6E", mlb::hexMul("A", "B"));
+tester::toEq("Hexadecimal Division", "C", mlb::hexDiv("64", "8")); 
+tester::toEq("Decimal Addition", "1E", mlb::hexAdd(10, 20));
+tester::toEq("Decimal Subtraction", "14", mlb::hexSub(30, 10)); 
+tester::toEq("Decimal Multiplication", "19", mlb::hexMul(5, 5));
+tester::toEq("Decimal Division", "A", mlb::hexDiv(100, 10)); });
     return 0;
 }

@@ -2,27 +2,34 @@
 #include <bits/stdc++.h>
 #include <vector>
 
-namespace mlb {
+namespace mlb
+{
     // Function to add two or more numbers
-    int add(int a[], int len){
+    int add(int a[], int len)
+    {
         int sum = 0;
-        for(int i = 0; i < len; i++){
+        for (int i = 0; i < len; i++)
+        {
             sum += a[i];
         }
         return sum;
     }
     // Function to subtract between two or more numbers
-    int sub(int a[], int len){
+    int sub(int a[], int len)
+    {
         int sum = 0;
-        for(int i = 0; i < len; i++){
+        for (int i = 0; i < len; i++)
+        {
             sum -= a[i];
         }
         return sum;
     }
     // Function to multiply two or more numbers
-    int mul(int a[], int len){
+    int mul(int a[], int len)
+    {
         int sum = 1;
-        for(int i = 0; i < len; i++){
+        for (int i = 0; i < len; i++)
+        {
             sum *= a[i];
         }
         return sum;
@@ -72,7 +79,7 @@ namespace mlb {
     double limit(int tt, int (*fc)(int))
     {
         int n;
-        int a = pow(10,-7);
+        int a = pow(10, -7);
         int lim = (fc(tt - a) + fc(tt + a)) / 2;
         return lim;
     }
@@ -143,8 +150,10 @@ namespace mlb {
         return true;
     }
     // get summation of a series
-    int sums(int start, int end, int (*fc)(int)){
-        if(start > end){
+    int sums(int start, int end, int (*fc)(int))
+    {
+        if (start > end)
+        {
             int temp = start;
             start = end;
             end = temp;
@@ -215,7 +224,7 @@ namespace mlb {
         }
         return result;
     }
-// Get all the prime factors of n
+    // Get all the prime factors of n
     std::vector<int> primeFactors(long long n)
     {
         std::vector<int> result;

@@ -1,19 +1,22 @@
-#include <iostream>
-#include "./../measure.cpp"
+#include "../measure.cpp"
+#include "../scripts/tester.cpp"
 
 using namespace std;
 using namespace mlb;
 
-int main(){
-    int towD [][2] = {{0, 0}, {0, 4}, {3, 4}, {3, 0}};
+int main()
+{
+    int towD[][2] = {{0, 0}, {0, 4}, {3, 4}, {3, 0}};
     int threeD[][3] = {{0, 0, 0}, {0, 2, 0}, {3, 2, 0}, {3, 0, 0}, {0, 0, 2}, {0, 2, 2}, {3, 2, 2}, {3, 0, 2}};
-    cout << "Perimeter of a rectangle: " << perimeter(towD, 4) << endl;
-    cout << "Area of a rectangle: " << area(towD, 4) << endl;
-    cout << "Volume of a cuboid: " << volume(threeD, 8) << endl;
-    cout << "Surface area of a cuboid: " << surfaceArea(threeD, 8) << endl;
-    float* angle = tringleAngle(towD[0], towD[1], towD[2]);
-    cout << "Angle of a triangle: " << angle[0] << endl;
-    float* median = tringleMedian(towD[0], towD[1], towD[2]);
-    cout << "Median of a triangle: " << median << endl;
+    tester::describe("Perimeter of a rectangle", [towD, threeD]()
+                     {
+                         tester::toClose("Perimeter of a rectangle", 14.2854, perimeter((int (*)[2])towD, 4));
+                         tester::toClose("Area of a rectangle", 12, area((int (*)[2])towD, 4));
+                         tester::toClose("Volume of a cuboid", 4, volume((int (*)[3])threeD, 8));
+                         tester::toClose("Surface area of a cuboid", 108, surfaceArea((int (*)[3])threeD, 8));
+                         float *angle = tringleAngle((int*)towD[0], (int*)towD[1], (int*)towD[2]);
+                         tester::toClose("Angle of a triangle", 1.32582, angle[0]);
+                         float *median = tringleMedian((int*)towD[0], (int*)towD[1], (int*)towD[2]);
+                         tester::toClose("Median of a triangle", 2.06155, median[0]); });
     return 0;
 }
