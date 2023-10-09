@@ -1,4 +1,4 @@
-path=$(pwd)/../test
+path=$(pwd)/test
 cd $path
 echo "Running tests in $path"
 echo $(ls)
