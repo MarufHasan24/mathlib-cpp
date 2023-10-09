@@ -7,9 +7,9 @@ fail_count=0
 for entry in $(ls); do
  if [[ $entry == *".cpp" ]]; then
   echo "Compiling $entry into ${entry%.*}.out"
-     g++ $entry -o $path/${entry%.*}.out -Wfatal-errors -std=c++20
-     $path/${entry%.*}.out
-     rm -rf $path/${entry%.*}.out
+     g++ $entry -o ${entry%.*}.out -Wfatal-errors -std=c++20
+     ./${entry%.*}.out
+     rm -rf ${entry%.*}.out
      if [ -f $path/test.txt ]; then
       echo "-----------------------------------"
       row_count=$((row_count+1))
