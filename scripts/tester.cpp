@@ -37,7 +37,6 @@ namespace tester
             {
                 cout << "Failed: " << message << endl;
                 cout << "Got something else, which is not equal to " << expected << endl;
-                cout << "Actual: " << actual << endl;
                 fail++;
             }
         }
@@ -63,7 +62,6 @@ namespace tester
             {
                 cout << "Failed: " << message << endl;
                 cout << "Got something else, which is not equal or close to " << expected << endl;
-                cout << "Actual: " << actual << endl;
                 fail++;
             }
         }
@@ -140,7 +138,6 @@ namespace tester
             {
                 cout << "Failed: " << message << endl;
                 cout << "Got something else, which is not equal with padding to " << expected << endl;
-                cout << "Actual: " << actual << endl;
                 fail++;
             }
         }
